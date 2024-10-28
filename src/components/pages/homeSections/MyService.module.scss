@@ -1,0 +1,130 @@
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .MyService {
+    padding: 100px 0;
+    background: #20273a;
+    z-index: 99;
+    position: sticky;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        
+        h1 {
+          font-size: 28px;
+        }
+        p {
+          color: gray;
+          font-size: 30px;
+          width: 600px;
+        }
+        h1 {
+          font-size: 40px;
+          color: #66fcf1;
+          span {
+            color: #04f8e8;
+          }
+        }
+      }
+      
+      .work {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        
+        .work_blocks {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 60px;
+          gap: 20px;
+          width: 100%;
+          
+          .work_box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 20px;
+            background: #20273a;
+            border: 3px solid #66fcf1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 36px 46px;
+            transition: 1s;
+            opacity: 0; // Başlangıçta görünmez
+  
+            &:nth-child(odd) {
+              animation: slideInFromRight 1s forwards; // Sağdan gelen animasyon
+            }
+  
+            &:nth-child(even) {
+              animation: slideInFromLeft 1s forwards; // Soldan gelen animasyon
+            }
+  
+            &:hover {
+              background: rgba(102, 115, 252, 0.226);
+              background: linear-gradient(66deg, rgba(102, 115, 252, 0.185) 35%, rgba(102, 242, 252, 0.137) 84%);
+            }
+  
+            h5 {
+              color: #446381;
+              font-size: 32px;
+              font-weight: 700;
+              padding-bottom: 20px;
+            }
+            h3 {
+              margin: 33px 0 36px 0;
+              color: #fff;
+              font-size: 40px;
+              font-weight: 700;
+              padding-bottom: 30px;
+            }
+            p {
+              padding-top: 20px;
+              color: #826f8c;
+              font-size: 18px;
+              font-weight: 400;
+              width: 300px;
+            }
+            &:hover:before {
+              position: absolute;
+              right: 23px;
+              top: 10px;
+              // content: url(./image/badge.png);
+            }
+          }
+        }
+      }
+    }
+  }
+  

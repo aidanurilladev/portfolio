@@ -1,0 +1,68 @@
+.header {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); // Arka plan şeffaflığını artırarak blur etkisini daha belirgin yapar
+  backdrop-filter: blur(10px); // Arka planı bulanıklaştırır
+  -webkit-backdrop-filter: blur(10px); // Safari için
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Opsiyonel: Hafif gölge efekti ekler
+
+  .scroll {
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        h1 {
+          color: #66fcf1;
+        }
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 790px;
+
+        .navigation {
+          padding: 2rem 0;
+
+          ol {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            font-size: 18px;
+            color: #fff;
+
+            li {
+              padding: 10px;
+              color: #fff;
+              font-weight: bold;
+              font-size: 20px;
+
+              &:hover {
+                color: #66fcf1;
+              }
+            }
+          }
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        background: #66fcf1;
+        color: gray;
+        border: none;
+        font-weight: bold;
+        border-radius: 7px;
+      }
+    }
+  }
+}
